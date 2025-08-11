@@ -31,7 +31,7 @@ public class WorkspaceService
     }
 
     @Override
-    public WorkspaceDTO update(WorkspaceUpdateDto dto, String id) {
+    public  WorkspaceDTO update(WorkspaceUpdateDto dto, String id) {
         Workspace warehouse = validator.existsAndGet(id);
         mapper.fromDto(dto, warehouse);
         Workspace save = repository.save(warehouse);
@@ -54,4 +54,6 @@ public class WorkspaceService
         Workspace warehouse = validator.existsAndGet(id);
         repository.delete(warehouse);
     }
+
+
 }

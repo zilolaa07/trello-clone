@@ -20,7 +20,7 @@ public class WorkspaceMapper {
     // Entity -> DTO (Response)
     public WorkspaceDTO toDto(Workspace workspace) {
         WorkspaceDTO dto = new WorkspaceDTO();
-        dto.setId(Long.valueOf(workspace.getId()));
+        dto.setId(String.valueOf(Long.valueOf(workspace.getId())));
         dto.setName(workspace.getName());
         return dto;
     }

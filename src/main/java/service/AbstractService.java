@@ -1,5 +1,7 @@
 package service;
 
+import dto.WorkspaceUpdateDto;
+
 public abstract class AbstractService<M, R, V> {
     protected final M mapper;
     protected final R repository;
@@ -10,4 +12,6 @@ public abstract class AbstractService<M, R, V> {
         this.repository = repository;
         this.validator = validator;
     }
+
+
 }
